@@ -1,0 +1,16 @@
+# Ignore all files with my personal notes
+**/notes.txt
+**/instrukcijas.txt
+**/ports.txt
+**/temp_notes.sql
+**/md_*
+**/sandbox.py
+**/*test*
+
+# Ignore key files as an additional security measure
+**/*.pem
+**/*.pub
+
+# Ignore ipynb related files
+**/cache/
+**.ipynb_checkpoints
