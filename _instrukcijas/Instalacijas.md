@@ -21,7 +21,7 @@ https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-b
 
 
 ## 1. Linux vides instalācija (neobligāti)  
-Linux vide būtu ļoti ieteicama, lai testētu bash skriptus priekš instalācijām un programmistiskām darbībām ar datu failiem, ko nav iespējams veikt ar Windows.
+Linux vide būtu ļoti ieteicama, lai testētu bash skriptus priekš instalācijām un programmistiskām darbībām ar datu failiem, ko nav iespējams (vienkārši) veikt ar Windows cmd.
 
 **Windows 10**  
 Ja Jūsu operētājsistēma ir 64 bitu, tad sekojiet šai pamācībai https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/  
@@ -32,11 +32,11 @@ Pēc veiksmīgas instalācijas, Ubuntu aplikāciju būtu jāvar atrast un palais
 
 
 **Linux / macOS:**  
-Ja plānojat strādāt uz Linux vai macOS operētājsistēmas, tad šo punktu varat izlaist un uz jūsu datoriem jau ir viss nepieciešamais
+Ja plānojat strādāt uz Linux vai macOS operētājsistēmas, tad šo punktu varat izlaist un uz jūsu datoriem jau ir viss nepieciešamais.
 
 
 ## 2. SSH funkcionalitāte (obligāti)  
-Mums būs nepieciešams lietot ssh, lai attālināti pieslēgtos AWS virtuālajām mašīnām uz kurām izpildīsim lielu daļu koda. Uz jūsu datoriem nedrīkst būt brauzerim slēgti porti. Šis mēdz būt windows darba datoriem. Ar to ir jāvēršās pie IT daļas darbā.
+Mums būs nepieciešams lietot ssh, lai attālināti pieslēgtos AWS virtuālajām mašīnām uz kurām izpildīsim lielu daļu koda. Uz jūsu datoriem nedrīkst būt brauzerim slēgti porti. Šis mēdz būt windows darba datoriem. Ar to ir jāvēršās pie IT daļas darbā, lai atvērtu portus: 4040, 4041, 8088, 8089, 9998, 9999, 2181, 2888, 3888, 9092, 6667
 
 <!-- Ja ir ubuntu subsistēma, tad var lietot ssh un iespējams arī git -->
 <!-- Ar ubuntu apakšistēmu lietot python/vscode/jupyter droši vien ir slikta ideja-->
@@ -101,10 +101,23 @@ Ir iespējams, ka nepieciešamās pakotnes jau būs instalētas. Tādā gadījum
 
 
 ## 5. VSCode (obligāti)  
-Mēs lietosim VSCode, lai rediģētu Python, bash un SQL kodu, kā arī lai ērti sekotu kursa repozitorijam caur git.
+Mēs lietosim VSCode, lai rediģētu Python, bash un SQL kodu, kā arī lai ērti sekotu kursa repozitorijam caur git. VSCode ir arī iebūvēts debuggeris un ērts failu sistēmas skatītājs.  
 Ielādējiet to no sekojošā linka:  
 https://code.visualstudio.com/download.  
 Nākamais solis ir instalēt Python paplašinājumu uz VSCode, kas atļaus automātiski atrast kļūdas un labot koda sintaksi.
 
 ## 6. git (obligāti)  
-git ir viena no pasaulē populārākajām koda versiju kontroles sistēmām. Izmantosim to, lai atjauninātu kursa materiālus. 
+Instalēt var sekojot šai pamācībai: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git  
+git ir viena no pasaulē populārākajām koda versiju kontroles sistēmām. To izmantosim to, lai atjauninātu kursa materiālus, kuri kursa gaitā tiks atjaunināti vai papildināti. To, kā ar git pareizi strādāt gan kursa gaitā neapskatīsim, bet pamatus var apgūt 20-30 minūtēs izlasot:  
+https://dev.to/milu_franz/git-explained-the-basics-igc un https://rogerdudler.github.io/git-guide/  
+Vai, paldziļināti, lasot atsevišķu komandu aprakstus oficiālajā dokumentācijā. Komandas, ko būtu jāzina ir sekojošās:  
+* `fetch`
+* `pull`
+* `status`
+
+Kursa gaitā, bieži notiks tā, ka kāds fails pie kura esam strādājuši, ir papildināts ar papildu piezīmēm vai pareizajām atbildēm, bet šīs izmaiņas nav uz jūsu datora. Failu (pie kura lekcijā jau ir strādāts), kuram ir githubā ielikta papildinātā versija un kurš būtu jāatjaunina, ir jāpārsauc (efektīvi uztaisot kopiju) un jāielādē tā jaunāko versiju.  
+Piemērs tam, kā to izdarīt, atjauninot vienu konkrētu failu no online repozitorija:  
+0. `mv path/to/file path/to/copy_of_file` 
+1. `git fetch` 
+2. `git checkout path/to/file`
+<!-- `git restore -s origin/master -- path/to/file` -->
