@@ -117,7 +117,7 @@ Vai, paldziļināti, lasot atsevišķu komandu aprakstus oficiālajā dokumentā
 
 Kursa gaitā, bieži notiks tā, ka kāds fails pie kura esam strādājuši, ir papildināts ar papildu piezīmēm vai pareizajām atbildēm, bet šīs izmaiņas nav uz jūsu datora. Failu (pie kura lekcijā jau ir strādāts), kuram ir githubā ielikta papildinātā versija un kurš būtu jāatjaunina, ir jāpārsauc (efektīvi uztaisot kopiju) un jāielādē tā jaunāko versiju.  
 Piemērs tam, kā to izdarīt, atjauninot vienu konkrētu failu no online repozitorija:  
-0. `mv path/to/file path/to/copy_of_file` 
-1. `git fetch` 
-2. `git checkout path/to/file`
+0. `mv path/to/file path/to/copy_of_file`  
+1. `git fetch`  
+2. `git checkout path/to/file`  
 <!-- `git restore -s origin/master -- path/to/file` -->
