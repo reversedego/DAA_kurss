@@ -11,6 +11,7 @@
 **/*.pem
 **/*.pub
 
-# Ignore ipynb related files
+# Ignore editor related files
 **/cache/
 **.ipynb_checkpoints
+**/.vscode
