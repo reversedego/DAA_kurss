@@ -4,8 +4,9 @@ import random
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.datasets import make_regression
+from scipy.stats import norm
 
-X,Y = make_regression(random_state=0,n_features=1, noise=10) # Ģenerē divus numpy masīvus ar troksni Y masīvā, lai simulētu reālus datus.
+X,Y = make_regression(n_samples=300,random_state=0,n_features=1, noise=10) # Ģenerē divus numpy masīvus ar troksni Y masīvā, lai simulētu reālus datus.
 
 # Dati ir jātransformē. 
 # Negatīviem nobraukumiem un patēriņiem nav nekādas jēgas.
@@ -29,3 +30,15 @@ Y = Y/800
 
 df = pd.DataFrame.from_dict({'X':X,'Y':Y})
 df.to_csv('linear.csv')
+
+
+length =300
+x_exp = np.linspace(0,1.5,length)
+y_exp = [np.exp(3*elem) for elem in x_exp] + norm.rvs(scale=4,size=length)
+df_dct = {'X':x_exp,'Y':y_exp}
+pd.DataFrame(df_dct).to_csv('exponential.csv')
+
+
+
+df_dct = {'X':X,'Y':Y**2+norm.rvs(scale=0.01,size=300)}
+pd.DataFrame(df_dct).to_csv('square.csv')
