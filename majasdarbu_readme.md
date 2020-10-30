@@ -31,4 +31,4 @@ Diemžēl to, cik mājasdarbu būs kopumā un tas, cik punktu katrs būs vērts 
 
 * Ja ir uzdots izveidot funkciju, tad, to vērtējot, funkcijai, atsaucoties uz norādījumos noteikto nosaukumu, tiks padots liels skaits patvaļīgu, bet pareiza formāta argumentu un vērtēti rezultāti. Funkcijas, kuras netiek tiešā veidā prasītas varat saukt kā vēlaties\* (skat. nākamo punktu)  
 
-* Katram apakšuzdevumam ir iespējams nopelnīt papildu 0-2 punktus, ja tiek lietots laba koda rakstīšanas prakse t.i. atbilstoši mainīgo nosaukumi, lietoti komentāri, kas paskaidro domu procesu aiz implementētās loģikas u.t.t. Šeit tiks ņemts vērā arī Vienkāršākiem uzdevumiem šo punktu būs mazāk. Tiks ņemts vērā arī vai šis tiek ievērots visur apakšuzdevumā.
+* Katram uzdevumam ir iespējams nopelnīt papildu 0-2 punktus, ja tiek lietots laba koda rakstīšanas prakse t.i. atbilstoši mainīgo nosaukumi, lietoti komentāri, kas paskaidro domu procesu aiz implementētās loģikas u.t.t. Šeit tiks ņemts vērā arī Vienkāršākiem uzdevumiem šo punktu būs mazāk. Tiks ņemts vērā arī vai šis tiek ievērots visur uzdevumā.
