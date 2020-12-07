@@ -6,3 +6,4 @@ Publiska glabātuve ar uzdevumiem un atsauces materiāliem RCS Datu analīzes ku
 Lai gan visi materiāli šeit lielākoties ir .ipynb formātā, mājasdarbi būs jāiesniedz .py formātā. 
 Lūdzu reģistrēties arī google classroom.
 
+Kursa apraksts un programma atrodami failā Apraksts.md
